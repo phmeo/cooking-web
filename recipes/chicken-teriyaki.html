@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chicken Teriyaki — Taste & Tales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="../index.html" class="logo">Taste & Tales</a>
+        <nav class="nav">
+          <a href="../index.html" class="nav-link">Home</a>
+          <a href="../recipes.html" class="nav-link active">Recipes</a>
+          <a href="../about.html" class="nav-link">About</a>
+          <a href="../contact.html" class="nav-link">Contact</a>
+        </nav>
+        <button id="theme-toggle" class="btn" aria-label="Toggle theme">🌓</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>›</span>
+        <a href="../recipes.html">Recipes</a>
+        <span>›</span>
+        <span>Chicken Teriyaki</span>
+      </nav>
+
+      <article class="recipe" data-cats="asian">
+        <header class="recipe-header">
+          <h1>Chicken Teriyaki</h1>
+          <div class="recipe-meta">30 mins • Serves 3–4 • Easy</div>
+          <div class="header-actions-row">
+            <button class="btn" onclick="window.print()">Print recipe</button>
+          </div>
+        </header>
+
+        <nav class="quick-nav" aria-label="Recipe sections">
+          <a class="quick-link" href="#ingredients">Ingredients</a>
+          <a class="quick-link" href="#steps">Steps</a>
+          <a class="quick-link" href="#equipment">Equipment</a>
+          <a class="quick-link" href="#nutrition">Nutrition</a>
+          <a class="quick-link" href="#notes">Notes</a>
+        </nav>
+
+        <div class="categories-box">
+          <h4>Categories</h4>
+          <div class="cat-badges">
+            <a class="cat-badge" href="../recipes.html?category=asian"><span class="cat-icon">🍜</span>Asian</a>
+          </div>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-card"><div class="icon">⏱️</div><div class="meta"><span class="label">Prep</span><span class="value">10 mins</span></div></div>
+          <div class="info-card"><div class="icon">🍳</div><div class="meta"><span class="label">Cook</span><span class="value">20 mins</span></div></div>
+          <div class="info-card"><div class="icon">📦</div><div class="meta"><span class="label">Serves</span><span class="value">3–4</span></div></div>
+          <div class="info-card"><div class="icon">🎯</div><div class="meta"><span class="label">Difficulty</span><span class="value">Easy</span></div></div>
+        </div>
+
+        <div class="recipe-hero">
+          <img src="../assets/images/placeholder-plate.svg" alt="Chicken Teriyaki" />
+        </div>
+
+        <div class="recipe-grid">
+          <section class="panel" id="steps">
+            <h3>Steps</h3>
+            <div class="panel-body">
+              <ol class="steps checklist">
+                <li><label><input type="checkbox"/> Whisk sauce: 1/4 cup soy sauce, 1/4 cup mirin, 2 tbsp sake (or water + 1 tsp sugar), 1 tbsp honey. Set aside.</label></li>
+                <li><label><input type="checkbox"/> Pat chicken thighs dry and lightly salt. Place skin-side down in a cold nonstick pan, set to medium heat; render and crisp skin 7–8 mins until deep gold.</label></li>
+                <li><label><input type="checkbox"/> Flip and cook 3–4 mins until nearly cooked through (165°F/74°C internal at finish).</label></li>
+                <li><label><input type="checkbox"/> Pour sauce into pan. Simmer, spooning over chicken, until thick, glossy, and bubbly, 3–5 mins.</label></li>
+                <li><label><input type="checkbox"/> Rest 2 mins, slice, and serve over rice. Garnish with sesame seeds and scallions.</label></li>
+              </ol>
+              <div class="callout">Tip: Starting in a cold pan maximizes fat rendering and skin crispness without burning.</div>
+            </div>
+          </section>
+
+          <aside class="panel sticky" id="ingredients">
+            <h3>Ingredients</h3>
+            <div class="panel-body">
+              <ul>
+                <li>600 g chicken thighs, skin-on, boneless</li>
+                <li>1/4 cup soy sauce</li>
+                <li>1/4 cup mirin</li>
+                <li>2 tbsp sake (or water + 1 tsp sugar)</li>
+                <li>1 tbsp honey or sugar</li>
+                <li>Sesame seeds and scallions to finish</li>
+              </ul>
+            </div>
+          </aside>
+
+          <aside class="panel" id="equipment">
+            <h3>Equipment</h3>
+            <div class="panel-body">
+              <ul>
+                <li>Nonstick skillet</li>
+                <li>Tongs and knife</li>
+                <li>Instant-read thermometer (optional)</li>
+              </ul>
+            </div>
+          </aside>
+
+          <aside class="panel" id="nutrition">
+            <h3>Nutrition (approx. per serving)</h3>
+            <div class="panel-body">
+              <table class="nutrition">
+                <tr><th>Calories</th><td>420</td></tr>
+                <tr><th>Carbs</th><td>10 g</td></tr>
+                <tr><th>Protein</th><td>28 g</td></tr>
+                <tr><th>Fat</th><td>28 g</td></tr>
+                <tr><th>Sodium</th><td>980 mg</td></tr>
+              </table>
+            </div>
+          </aside>
+
+          <section class="panel" id="notes">
+            <h3>Notes & Variations</h3>
+            <div class="panel-body">
+              <ul>
+                <li>Swap thighs for chicken breast (reduce cook time).</li>
+                <li>Add 1 tsp ginger and 1 clove garlic to sauce for extra depth.</li>
+                <li>For a thicker glaze, stir in 1 tsp cornstarch mixed with 1 tbsp water.</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </article>
+    </main>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">▲</a>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Taste & Tales</h3>
+            <p>Simple recipes, clear steps, and flavors that feel like home.</p>
+            <div class="social-links">
+              <a href="#" aria-label="Instagram">📷</a>
+              <a href="#" aria-label="Facebook">📘</a>
+              <a href="#" aria-label="Pinterest">📌</a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="../recipes.html">All Recipes</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Categories</h4>
+            <ul>
+              <li><a href="../recipes.html?category=quick">Quick & Easy</a></li>
+              <li><a href="../recipes.html?category=vegetarian">Vegetarian</a></li>
+              <li><a href="../recipes.html?category=dessert">Desserts</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Newsletter</h4>
+            <p>Get new recipes and tips delivered to your inbox.</p>
+            <form class="footer-newsletter">
+              <input type="email" placeholder="Your email" />
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© <span id="year"></span> Taste & Tales. Cook with love.</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const root = document.documentElement;
+      const saved = localStorage.getItem('theme');
+      if (saved) root.setAttribute('data-theme', saved);
+      document.getElementById('theme-toggle').addEventListener('click', () => {
+        const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      });
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html> 

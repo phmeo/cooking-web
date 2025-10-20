@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taste & Tales — Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">Taste & Tales</a>
+        <nav class="nav">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="recipes.html" class="nav-link">Recipes</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <button id="search-toggle" class="btn-icon" aria-label="Search">🔍</button>
+          <button id="theme-toggle" class="btn" aria-label="Toggle theme">🌓</button>
+          <button id="nav-toggle" class="btn-icon mobile-only" aria-label="Menu">☰</button>
+        </div>
+      </div>
+      <div id="search-overlay" class="search-overlay">
+        <div class="search-container">
+          <input type="search" id="global-search" placeholder="Search recipes, ingredients, techniques..." />
+          <button id="search-close" class="btn-icon">✕</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section with Parallax -->
+      <section class="hero hero-parallax">
+        <div class="hero-bg">
+          <div class="hero-pattern"></div>
+        </div>
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1 class="hero-title">
+              <span class="hero-line">Cook Simply.</span>
+              <span class="hero-line">Eat Joyfully.</span>
+            </h1>
+            <p class="hero-subtitle">Everyday recipes with clear steps, fresh ingredients, and flavors that feel like home.</p>
+            <div class="hero-actions">
+              <a href="recipes.html" class="btn btn-primary btn-large">Browse Recipes</a>
+              <a href="#featured" class="btn btn-outline btn-large">Featured</a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Recipes</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">15min</span>
+                <span class="stat-label">Average</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number">4.9★</span>
+                <span class="stat-label">Rating</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="hero-card">
+              <img src="assets/images/placeholder-plate.svg" alt="A simple plate illustration" />
+              <div class="hero-card-overlay">
+                <span class="hero-card-text">Fresh & Simple</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <div class="scroll-arrow"></div>
+        </div>
+      </section>
+
+      <!-- Featured Recipes Section -->
+      <section id="featured" class="section featured-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Featured Recipes</h2>
+            <p>Handpicked favorites for every occasion</p>
+          </div>
+          <div class="featured-grid">
+            <article class="featured-card featured-main">
+              <div class="featured-image">
+                <img src="assets/images/placeholder-plate.svg" alt="Spaghetti Aglio e Olio" />
+                <div class="featured-badge">Editor's Choice</div>
+              </div>
+              <div class="featured-content">
+                <div class="featured-meta">
+                  <span class="difficulty easy">Easy</span>
+                  <span class="time">15 mins</span>
+                </div>
+                <h3>Spaghetti Aglio e Olio</h3>
+                <p>Garlic, olive oil, chili, and perfectly al dente pasta in 15 minutes.</p>
+                <a href="recipes/spaghetti-aglio-olio.html" class="btn btn-primary">View Recipe</a>
+              </div>
+            </article>
+            <div class="featured-sidebar">
+              <article class="featured-card featured-small">
+                <img src="assets/images/placeholder-plate.svg" alt="Chicken Teriyaki" />
+                <div class="featured-content">
+                  <h4>Chicken Teriyaki</h4>
+                  <span class="time">30 mins</span>
+                </div>
+              </article>
+              <article class="featured-card featured-small">
+                <img src="assets/images/placeholder-plate.svg" alt="Avocado Toast" />
+                <div class="featured-content">
+                  <h4>Avocado Toast</h4>
+                  <span class="time">10 mins</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Categories Section -->
+      <section class="section categories-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Browse by Category</h2>
+            <p>Find exactly what you're looking for</p>
+          </div>
+          <div class="categories-grid">
+            <a href="recipes.html?category=quick" class="category-card" data-category="quick">
+              <div class="category-icon">⚡</div>
+              <h3>Quick & Easy</h3>
+              <p>15 minutes or less</p>
+              <span class="category-count">6 recipes</span>
+            </a>
+            <a href="recipes.html?category=vegetarian" class="category-card" data-category="vegetarian">
+              <div class="category-icon">🥬</div>
+              <h3>Vegetarian</h3>
+              <p>Plant-based goodness</p>
+              <span class="category-count">4 recipes</span>
+            </a>
+            <a href="recipes.html?category=dessert" class="category-card" data-category="dessert">
+              <div class="category-icon">🍰</div>
+              <h3>Desserts</h3>
+              <p>Sweet treats</p>
+              <span class="category-count">1 recipe</span>
+            </a>
+            <a href="recipes.html?category=asian" class="category-card" data-category="asian">
+              <div class="category-icon">🍜</div>
+              <h3>Asian Cuisine</h3>
+              <p>Flavors of the East</p>
+              <span class="category-count">3 recipes</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest Recipes Section -->
+      <section class="section latest-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Latest Recipes</h2>
+            <a class="view-all" href="recipes.html">View all recipes</a>
+          </div>
+          <div class="card-grid">
+            <a class="card" href="recipes/spaghetti-aglio-olio.html">
+              <div class="card-image">
+                <img src="assets/images/placeholder-plate.svg" alt="Spaghetti Aglio e Olio" />
+                <div class="card-overlay">
+                  <span class="card-time">15 mins</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span class="difficulty easy">Easy</span>
+                  <span class="cuisine">Italian</span>
+                </div>
+                <h3>Spaghetti Aglio e Olio</h3>
+                <p>Garlic, olive oil, chili, and perfectly al dente pasta in 15 minutes.</p>
+                <div class="card-footer">
+                  <span class="rating">★★★★★</span>
+                  <span class="servings">Serves 2</span>
+                </div>
+              </div>
+            </a>
+            <a class="card" href="recipes/chicken-teriyaki.html">
+              <div class="card-image">
+                <img src="assets/images/placeholder-plate.svg" alt="Chicken Teriyaki" />
+                <div class="card-overlay">
+                  <span class="card-time">30 mins</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span class="difficulty easy">Easy</span>
+                  <span class="cuisine">Japanese</span>
+                </div>
+                <h3>Chicken Teriyaki</h3>
+                <p>Juicy pan-seared chicken glazed with a shiny sweet-savory sauce.</p>
+                <div class="card-footer">
+                  <span class="rating">★★★★★</span>
+                  <span class="servings">Serves 3-4</span>
+                </div>
+              </div>
+            </a>
+            <a class="card" href="recipes/avocado-toast.html">
+              <div class="card-image">
+                <img src="assets/images/placeholder-plate.svg" alt="Avocado Toast" />
+                <div class="card-overlay">
+                  <span class="card-time">10 mins</span>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="card-meta">
+                  <span class="difficulty beginner">Beginner</span>
+                  <span class="cuisine">Breakfast</span>
+                </div>
+                <h3>Avocado Toast</h3>
+                <p>Creamy avocado on crunchy sourdough with lemon and chili flakes.</p>
+                <div class="card-footer">
+                  <span class="rating">★★★★☆</span>
+                  <span class="servings">Serves 1-2</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter Section -->
+      <section class="section newsletter-section">
+        <div class="container">
+          <div class="newsletter-content">
+            <div class="newsletter-text">
+              <h2>Stay Updated</h2>
+              <p>Get new recipes, cooking tips, and seasonal inspiration delivered to your inbox.</p>
+              <ul class="newsletter-benefits">
+                <li>✨ Weekly recipe roundups</li>
+                <li>🍳 Cooking technique guides</li>
+                <li>📅 Seasonal ingredient highlights</li>
+                <li>🎁 Exclusive subscriber content</li>
+              </ul>
+            </div>
+            <div class="newsletter-form">
+              <form class="newsletter-signup" action="mailto:hello@tasteandtales.example" method="post" enctype="text/plain">
+                <div class="form-group">
+                  <input type="text" name="name" placeholder="Your name" required />
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" placeholder="Your email" required />
+                </div>
+                <button type="submit" class="btn btn-primary btn-large">Subscribe</button>
+              </form>
+              <p class="newsletter-note">No spam, unsubscribe anytime. We respect your privacy.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Preview Section -->
+      <section class="section about-preview">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-content">
+              <h2>About Taste & Tales</h2>
+              <p>I started this blog to share simple, flavorful recipes that anyone can follow. Every recipe is tested multiple times and written with clear, time-saving instructions.</p>
+              <div class="about-highlights">
+                <div class="highlight">
+                  <span class="highlight-icon">🎯</span>
+                  <div>
+                    <h4>Tested & Reliable</h4>
+                    <p>Every recipe tested 2-3 times</p>
+                  </div>
+                </div>
+                <div class="highlight">
+                  <span class="highlight-icon">⏰</span>
+                  <div>
+                    <h4>Time-Saving</h4>
+                    <p>Efficient techniques & prep tips</p>
+                  </div>
+                </div>
+                <div class="highlight">
+                  <span class="highlight-icon">🌱</span>
+                  <div>
+                    <h4>Flexible</h4>
+                    <p>Easy swaps & variations included</p>
+                  </div>
+                </div>
+              </div>
+              <a href="about.html" class="btn btn-outline">Learn More</a>
+            </div>
+            <div class="about-image">
+              <img src="assets/images/placeholder-plate.svg" alt="About Taste & Tales" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="section testimonials-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>What Readers Say</h2>
+            <p>Real feedback from home cooks</p>
+          </div>
+          <div class="testimonials-grid">
+            <blockquote class="testimonial">
+              <div class="testimonial-content">
+                <p>"The spaghetti aglio e olio recipe is now my go-to weeknight dinner. So simple yet so delicious!"</p>
+              </div>
+              <footer class="testimonial-author">
+                <img src="assets/images/placeholder-plate.svg" alt="Sarah M." />
+                <div>
+                  <cite>Sarah M.</cite>
+                  <span>Home Cook</span>
+                </div>
+              </footer>
+            </blockquote>
+            <blockquote class="testimonial">
+              <div class="testimonial-content">
+                <p>"Clear instructions and helpful tips make even complex dishes approachable. Love the time estimates!"</p>
+              </div>
+              <footer class="testimonial-author">
+                <img src="assets/images/placeholder-plate.svg" alt="Mike R." />
+                <div>
+                  <cite>Mike R.</cite>
+                  <span>Beginner Cook</span>
+                </div>
+              </footer>
+            </blockquote>
+            <blockquote class="testimonial">
+              <div class="testimonial-content">
+                <p>"The chicken teriyaki is restaurant-quality. My family requests it weekly!"</p>
+              </div>
+              <footer class="testimonial-author">
+                <img src="assets/images/placeholder-plate.svg" alt="Lisa K." />
+                <div>
+                  <cite>Lisa K.</cite>
+                  <span>Family Chef</span>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">▲</a>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Taste & Tales</h3>
+            <p>Simple recipes, clear steps, and flavors that feel like home.</p>
+            <div class="social-links">
+              <a href="#" aria-label="Instagram">📷</a>
+              <a href="#" aria-label="Facebook">📘</a>
+              <a href="#" aria-label="Pinterest">📌</a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="recipes.html">All Recipes</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Categories</h4>
+            <ul>
+              <li><a href="recipes.html">Quick & Easy</a></li>
+              <li><a href="recipes.html">Vegetarian</a></li>
+              <li><a href="recipes.html">Desserts</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Newsletter</h4>
+            <p>Get new recipes and tips delivered to your inbox.</p>
+            <form class="footer-newsletter">
+              <input type="email" placeholder="Your email" />
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© <span id="year"></span> Taste & Tales. Cook with love.</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive NPC Assistant - Chef Quan -->
+    <div class="chef-assistant" id="chefAssistant">
+      <div class="chef-avatar" id="chefAvatar">
+        <div class="notification-badge" id="notificationBadge" style="display: none;">1</div>
+      </div>
+      
+      <div class="chat-bubble" id="chatBubble">
+        <div class="chat-header">
+          <div class="chat-title">
+            <span>Chef Quan</span>
+            <div class="chef-status"></div>
+          </div>
+          <button class="chat-close" id="chatClose">×</button>
+        </div>
+        
+        <div class="chat-content">
+          <div class="chat-messages" id="chatMessages">
+            <div class="message chef">
+              <div class="message-content">
+                👋 Hi there! I'm Chef Quan, your cooking assistant! I'm here to help you discover amazing recipes, cooking tips, and make your culinary journey delicious! What can I help you with today?
+              </div>
+            </div>
+          </div>
+          
+          <div class="chat-suggestions">
+            <div class="suggestion-chips" id="suggestionChips">
+              <div class="suggestion-chip" data-message="Show me quick recipes">🚀 Quick recipes</div>
+              <div class="suggestion-chip" data-message="I need cooking tips">💡 Cooking tips</div>
+              <div class="suggestion-chip" data-message="Recommend something healthy">🥗 Healthy options</div>
+              <div class="suggestion-chip" data-message="Help me with desserts">🍰 Desserts</div>
+            </div>
+            
+            <div class="quick-actions">
+              <div class="quick-action" id="randomRecipe">
+                <span class="icon">🎲</span>
+                Random Recipe
+              </div>
+              <div class="quick-action" id="cookingTip">
+                <span class="icon">💡</span>
+                Daily Tip
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Theme toggle
+      const root = document.documentElement;
+      const saved = localStorage.getItem('theme');
+      if (saved) root.setAttribute('data-theme', saved);
+      document.getElementById('theme-toggle').addEventListener('click', () => {
+        const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      });
+
+      // Search overlay
+      const searchToggle = document.getElementById('search-toggle');
+      const searchOverlay = document.getElementById('search-overlay');
+      const searchClose = document.getElementById('search-close');
+      const globalSearch = document.getElementById('global-search');
+
+      searchToggle.addEventListener('click', () => {
+        searchOverlay.classList.add('active');
+        globalSearch.focus();
+      });
+
+      searchClose.addEventListener('click', () => {
+        searchOverlay.classList.remove('active');
+      });
+
+      searchOverlay.addEventListener('click', (e) => {
+        if (e.target === searchOverlay) {
+          searchOverlay.classList.remove('active');
+        }
+      });
+
+      // Parallax effect
+      window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const parallax = document.querySelector('.hero-parallax');
+        if (parallax) {
+          const speed = scrolled * 0.5;
+          parallax.style.transform = `translateY(${speed}px)`;
+        }
+      });
+
+      // Intersection Observer for animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+          }
+        });
+      }, observerOptions);
+
+      // Observe elements for animation
+      document.querySelectorAll('.card, .category-card, .testimonial, .featured-card').forEach(el => {
+        observer.observe(el);
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Back to top functionality
+      const backToTop = document.querySelector('.back-to-top');
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      });
+
+      backToTop.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+
+      // Update year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Mobile nav toggle
+      const navToggle = document.getElementById('nav-toggle');
+      const primaryNav = document.querySelector('.nav');
+      navToggle.addEventListener('click', () => {
+        primaryNav.classList.toggle('is-open');
+      });
+
+      // Chef Quan Interactive Assistant
+      class ChefQuan {
+        constructor() {
+          this.isOpen = false;
+          this.messages = [];
+          this.responses = {
+            greetings: [
+              "Hello! I'm Chef Quan! 👨‍🍳 Ready to cook something amazing?",
+              "Hey there, fellow food lover! What delicious adventure shall we embark on today?",
+              "Welcome to the kitchen! I'm here to make your cooking journey absolutely delightful! ✨"
+            ],
+            quickRecipes: [
+              "🚀 Here are some lightning-fast recipes: Try our 15-minute Spaghetti Aglio e Olio or 10-minute Avocado Toast! Perfect when you're short on time but big on flavor!",
+              "⚡ Quick & tasty options: Garlic Butter Shrimp (12 mins), Fried Rice (15 mins), or Caprese Salad (10 mins). All guaranteed crowd-pleasers!"
+            ],
+            cookingTips: [
+              "💡 Pro tip: Always taste as you go! Salt, acid (lemon/vinegar), and fat (butter/oil) can transform any dish. Season in layers for complex flavors!",
+              "🔥 Hot pan, cold oil! Heat your pan first, then add oil. This prevents sticking and gives better searing. Game changer for proteins!",
+              "🧄 Garlic tip: Add minced garlic in the last 30 seconds of cooking aromatics to prevent burning and maintain that punchy flavor!",
+              "🍅 Tomato secret: Add a pinch of sugar to tomato-based sauces to balance acidity and enhance natural sweetness!"
+            ],
+            healthy: [
+              "🥗 Healthy delights: Try our Tofu Stir Fry, Caprese Salad, or Tomato Basil Soup! All packed with nutrients and bursting with flavor!",
+              "💚 Nutritious choices: Avocado Toast for healthy fats, Vegetarian options galore, and remember - herbs and spices add flavor without calories!"
+            ],
+            desserts: [
+              "🍰 Sweet treats await! Our Fudgy Brownies are irresistible, and Chocolate Chip Cookies never fail to impress. Both are beginner-friendly!",
+              "🧁 Dessert magic: Start with our foolproof recipes! Pro tip: Room temperature ingredients mix better for cakes and cookies!"
+            ],
+            default: [
+              "I'm here to help with recipes, cooking tips, ingredient substitutions, and kitchen techniques! What specific cooking challenge can I assist you with?",
+              "Let me help you create something delicious! Are you looking for a specific type of cuisine, dietary preference, or cooking technique?",
+              "Cooking questions? I've got answers! Whether it's recipe recommendations, technique tips, or ingredient advice - I'm your culinary companion! 🍳"
+            ]
+          };
+          
+          this.dailyTips = [
+            "🥘 Mise en place: Prep all ingredients before cooking. It makes everything smoother and more enjoyable!",
+            "🌡️ Use a thermometer for perfect proteins. No more guessing - precision leads to perfection!",
+            "🧂 Season pasta water like the sea! Well-salted water infuses flavor into every strand.",
+            "🔪 Sharp knives are safer than dull ones. They require less pressure and give you better control.",
+            "🍋 Finish dishes with acid (lemon, vinegar) to brighten flavors and make everything pop!",
+            "🧅 Caramelize onions low and slow. Patience rewards you with incredible depth of flavor!",
+            "🥩 Let meat rest after cooking. It redistributes juices for maximum tenderness and flavor."
+          ];
+          
+          this.recipes = [
+            { name: "Spaghetti Aglio e Olio", time: "15 mins", url: "recipes/spaghetti-aglio-olio.html" },
+            { name: "Chicken Teriyaki", time: "30 mins", url: "recipes/chicken-teriyaki.html" },
+            { name: "Avocado Toast", time: "10 mins", url: "recipes/avocado-toast.html" },
+            { name: "Chocolate Chip Cookies", time: "35 mins", url: "recipes/chocolate-chip-cookies.html" },
+            { name: "Garlic Butter Shrimp", time: "12 mins", url: "recipes/garlic-butter-shrimp.html" }
+          ];
+          
+          this.initializeEventListeners();
+          this.showWelcomeNotification();
+        }
+        
+        initializeEventListeners() {
+          const avatar = document.getElementById('chefAvatar');
+          const chatBubble = document.getElementById('chatBubble');
+          const chatClose = document.getElementById('chatClose');
+          const suggestionChips = document.querySelectorAll('.suggestion-chip');
+          const randomRecipeBtn = document.getElementById('randomRecipe');
+          const cookingTipBtn = document.getElementById('cookingTip');
+          
+          avatar.addEventListener('click', () => this.toggleChat());
+          chatClose.addEventListener('click', () => this.closeChat());
+          
+          suggestionChips.forEach(chip => {
+            chip.addEventListener('click', () => {
+              const message = chip.dataset.message;
+              this.handleUserMessage(message);
+            });
+          });
+          
+          randomRecipeBtn.addEventListener('click', () => this.showRandomRecipe());
+          cookingTipBtn.addEventListener('click', () => this.showDailyTip());
+          
+          // Close chat when clicking outside
+          document.addEventListener('click', (e) => {
+            if (!e.target.closest('.chef-assistant') && this.isOpen) {
+              this.closeChat();
+            }
+          });
+        }
+        
+        showWelcomeNotification() {
+          setTimeout(() => {
+            const badge = document.getElementById('notificationBadge');
+            if (badge) {
+              badge.style.display = 'flex';
+              console.log('Welcome notification shown');
+              
+              // Auto-hide notification after 15 seconds
+              setTimeout(() => {
+                badge.style.display = 'none';
+                console.log('Welcome notification hidden');
+              }, 15000);
+            } else {
+              console.error('Notification badge element not found');
+            }
+          }, 2000);
+        }
+        
+        toggleChat() {
+          const chatBubble = document.getElementById('chatBubble');
+          const avatar = document.getElementById('chefAvatar');
+          const badge = document.getElementById('notificationBadge');
+          
+          if (this.isOpen) {
+            this.closeChat();
+          } else {
+            chatBubble.classList.add('show');
+            avatar.classList.add('talking');
+            badge.style.display = 'none';
+            this.isOpen = true;
+          }
+        }
+        
+        closeChat() {
+          const chatBubble = document.getElementById('chatBubble');
+          const avatar = document.getElementById('chefAvatar');
+          
+          chatBubble.classList.remove('show');
+          avatar.classList.remove('talking');
+          this.isOpen = false;
+        }
+        
+        handleUserMessage(message) {
+          this.addMessage(message, 'user');
+          this.showTypingIndicator();
+          
+          setTimeout(() => {
+            this.hideTypingIndicator();
+            const response = this.generateResponse(message);
+            this.addMessage(response, 'chef');
+          }, 1500);
+        }
+        
+        generateResponse(message) {
+          const lowerMessage = message.toLowerCase();
+          
+          if (lowerMessage.includes('quick') || lowerMessage.includes('fast') || lowerMessage.includes('easy')) {
+            return this.getRandomResponse('quickRecipes');
+          } else if (lowerMessage.includes('tip') || lowerMessage.includes('advice') || lowerMessage.includes('help')) {
+            return this.getRandomResponse('cookingTips');
+          } else if (lowerMessage.includes('healthy') || lowerMessage.includes('nutrition') || lowerMessage.includes('diet')) {
+            return this.getRandomResponse('healthy');
+          } else if (lowerMessage.includes('dessert') || lowerMessage.includes('sweet') || lowerMessage.includes('cake') || lowerMessage.includes('cookie')) {
+            return this.getRandomResponse('desserts');
+          } else if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey')) {
+            return this.getRandomResponse('greetings');
+          } else {
+            return this.getRandomResponse('default');
+          }
+        }
+        
+        getRandomResponse(category) {
+          const responses = this.responses[category];
+          return responses[Math.floor(Math.random() * responses.length)];
+        }
+        
+        showRandomRecipe() {
+          const recipe = this.recipes[Math.floor(Math.random() * this.recipes.length)];
+          const response = `🎲 Random recipe pick: **${recipe.name}** (${recipe.time})! This is one of our favorites - would you like me to take you there?`;
+          this.addMessage(response, 'chef');
+          
+          // Add a "Go to Recipe" button
+          setTimeout(() => {
+            const messagesContainer = document.getElementById('chatMessages');
+            const buttonDiv = document.createElement('div');
+            buttonDiv.className = 'message chef';
+            buttonDiv.innerHTML = `
+              <div class="message-content">
+                <button onclick="window.location.href='${recipe.url}'" style="background: #f97316; color: white; border: none; padding: 8px 16px; border-radius: 12px; cursor: pointer; font-weight: 500;">
+                  🍳 Go to Recipe
+                </button>
+              </div>
+            `;
+            messagesContainer.appendChild(buttonDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+          }, 500);
+        }
+        
+        showDailyTip() {
+          const tip = this.dailyTips[Math.floor(Math.random() * this.dailyTips.length)];
+          this.addMessage(`💡 **Daily Cooking Tip:** ${tip}`, 'chef');
+        }
+        
+        addMessage(content, sender) {
+          const messagesContainer = document.getElementById('chatMessages');
+          const messageDiv = document.createElement('div');
+          messageDiv.className = `message ${sender}`;
+          messageDiv.innerHTML = `<div class="message-content">${content}</div>`;
+          
+          messagesContainer.appendChild(messageDiv);
+          messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+        
+        showTypingIndicator() {
+          const messagesContainer = document.getElementById('chatMessages');
+          const typingDiv = document.createElement('div');
+          typingDiv.className = 'typing-indicator';
+          typingDiv.id = 'typingIndicator';
+                     typingDiv.innerHTML = `
+             <span>Chef Quan is typing</span>
+             <div class="typing-dots">
+               <div class="typing-dot"></div>
+               <div class="typing-dot"></div>
+               <div class="typing-dot"></div>
+             </div>
+           `;
+          
+          messagesContainer.appendChild(typingDiv);
+          messagesContainer.scrollTop = messagesContainer.scrollHeight;
+          
+          const avatar = document.getElementById('chefAvatar');
+          avatar.classList.add('thinking');
+        }
+        
+        hideTypingIndicator() {
+          const typingIndicator = document.getElementById('typingIndicator');
+          if (typingIndicator) {
+            typingIndicator.remove();
+          }
+          
+          const avatar = document.getElementById('chefAvatar');
+          avatar.classList.remove('thinking');
+          avatar.classList.add('talking');
+        }
+      }
+      
+      // Initialize Chef Quan
+      const chefQuan = new ChefQuan();
+
+      // Backup click handler for debugging
+      document.addEventListener('DOMContentLoaded', function() {
+        console.log('DOM loaded - setting up Chef Quan backup handlers');
+        
+        const avatar = document.getElementById('chefAvatar');
+        const chatBubble = document.getElementById('chatBubble');
+        
+        if (avatar && chatBubble) {
+          console.log('Elements found, adding backup click handler');
+          
+          // Direct click handler as backup
+          avatar.addEventListener('click', function(e) {
+            console.log('Avatar clicked!');
+            e.preventDefault();
+            e.stopPropagation();
+            
+            if (chatBubble.classList.contains('show')) {
+              chatBubble.classList.remove('show');
+              avatar.classList.remove('talking');
+              console.log('Chat closed');
+            } else {
+              chatBubble.classList.add('show');
+              avatar.classList.add('talking');
+              console.log('Chat opened');
+            }
+          });
+          
+          // Add hover effect
+          avatar.addEventListener('mouseenter', function() {
+            console.log('Avatar hovered');
+            avatar.style.transform = 'translateY(-5px) scale(1.1)';
+          });
+          
+          avatar.addEventListener('mouseleave', function() {
+            avatar.style.transform = 'translateY(0) scale(1)';
+          });
+        } else {
+          console.error('Chef Quan elements not found!', {avatar, chatBubble});
+        }
+      });
+    </script>
+  </body>
+</html> 

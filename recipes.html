@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taste & Tales — Recipes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">Taste & Tales</a>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="recipes.html" class="nav-link active">Recipes</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <button id="theme-toggle" class="btn" aria-label="Toggle theme">🌓</button>
+        <button id="nav-toggle" class="btn-icon mobile-only" aria-label="Menu">☰</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>Recipes</span>
+      </nav>
+
+      <section class="section">
+        <h1>All Recipes</h1>
+        <div class="filters">
+          <input type="search" class="input" id="search" placeholder="Search recipes..." />
+        </div>
+
+        <div class="chips" id="category-chips" aria-label="Filter by category">
+          <a href="#" class="chip active" data-cat="">All</a>
+          <a href="#" class="chip" data-cat="quick">Quick & Easy</a>
+          <a href="#" class="chip" data-cat="vegetarian">Vegetarian</a>
+          <a href="#" class="chip" data-cat="dessert">Desserts</a>
+          <a href="#" class="chip" data-cat="asian">Asian</a>
+          <a href="#" class="chip" data-cat="breakfast">Breakfast</a>
+          <a href="#" class="chip" data-cat="italian">Italian</a>
+        </div>
+
+        <div id="grid" class="card-grid">
+          <a class="card" data-title="Spaghetti Aglio e Olio" data-cats="quick,vegetarian,italian" href="recipes/spaghetti-aglio-olio.html">
+            <img src="assets/images/placeholder-plate.svg" alt="Spaghetti Aglio e Olio" />
+            <div class="card-body">
+              <h3>Spaghetti Aglio e Olio</h3>
+              <p>Garlic, olive oil, chili, and perfectly al dente pasta in 15 minutes.</p>
+              <span class="meta">15 mins • Easy</span>
+            </div>
+          </a>
+
+          <a class="card" data-title="Chicken Teriyaki" data-cats="asian" href="recipes/chicken-teriyaki.html">
+            <img src="assets/images/placeholder-plate.svg" alt="Chicken Teriyaki" />
+            <div class="card-body">
+              <h3>Chicken Teriyaki</h3>
+              <p>Juicy pan-seared chicken glazed with a shiny sweet-savory sauce.</p>
+              <span class="meta">30 mins • Easy</span>
+            </div>
+          </a>
+
+          <a class="card" data-title="Avocado Toast" data-cats="quick,vegetarian,breakfast" href="recipes/avocado-toast.html">
+            <img src="assets/images/placeholder-plate.svg" alt="Avocado Toast" />
+            <div class="card-body">
+              <h3>Avocado Toast</h3>
+              <p>Creamy avocado on crunchy sourdough with lemon and chili flakes.</p>
+              <span class="meta">10 mins • Beginner</span>
+            </div>
+          </a>
+
+          <a class="card" data-title="Beef Stir Fry" data-cats="asian,quick" href="recipes/beef-stir-fry.html">
+            <img src="assets/images/placeholder-plate.svg" alt="Beef Stir Fry" />
+            <div class="card-body">
+              <h3>Beef Stir Fry</h3>
+              <p>Colorful veggies and tender beef tossed in a garlicky sauce.</p>
+              <span class="meta">25 mins • Easy</span>
+            </div>
+          </a>
+
+          <a class="card" data-title="Chocolate Chip Cookies" data-cats="dessert" href="recipes/chocolate-chip-cookies.html">
+            <img src="assets/images/placeholder-plate.svg" alt="Chocolate Chip Cookies" />
+            <div class="card-body">
+              <h3>Chocolate Chip Cookies</h3>
+              <p>Chewy centers, crispy edges, and melty puddles of chocolate.</p>
+              <span class="meta">35 mins • Beginner</span>
+            </div>
+          </a>
+
+          <a class="card" data-title="Garlic Butter Shrimp" data-cats="quick" href="recipes/garlic-butter-shrimp.html">
+            <img src="assets/images/placeholder-plate.svg" alt="Garlic Butter Shrimp" />
+            <div class="card-body">
+              <h3>Garlic Butter Shrimp</h3>
+              <p>Juicy shrimp tossed in garlicky butter and lemon in 12 minutes.</p>
+              <span class="meta">12 mins • Easy</span>
+            </div>
+          </a>
+
+          <a class="card" data-title="Caprese Salad" data-cats="vegetarian,italian,quick" href="recipes/caprese-salad.html">
+            <img src="assets/images/placeholder-plate.svg" alt="Caprese Salad" />
+            <div class="card-body">
+              <h3>Caprese Salad</h3>
+              <p>Tomato, mozzarella, and basil with olive oil and balsamic.</p>
+              <span class="meta">10 mins • Beginner</span>
+            </div>
+          </a>
+
+          <a class="card" data-title="Pesto Pasta" data-cats="italian,vegetarian,quick" href="recipes/pesto-pasta.html">
+            <img src="assets/images/placeholder-plate.svg" alt="Pesto Pasta" />
+            <div class="card-body">
+              <h3>Pesto Pasta</h3>
+              <p>Al dente pasta tossed in basil pesto and parmesan.</p>
+              <span class="meta">15 mins • Easy</span>
+            </div>
+          </a>
+
+          <a class="card" data-title="Fried Rice" data-cats="asian,quick" href="recipes/fried-rice.html">
+            <img src="assets/images/placeholder-plate.svg" alt="Fried Rice" />
+            <div class="card-body">
+              <h3>Fried Rice</h3>
+              <p>Day-old rice stir-fried hot with veggies, egg, and soy.</p>
+              <span class="meta">15 mins • Easy</span>
+            </div>
+          </a>
+
+          <a class="card" data-title="Tofu Stir Fry" data-cats="asian,vegetarian,quick" href="recipes/tofu-stir-fry.html">
+            <img src="assets/images/placeholder-plate.svg" alt="Tofu Stir Fry" />
+            <div class="card-body">
+              <h3>Tofu Stir Fry</h3>
+              <p>Crispy tofu and vibrant veggies in a glossy sauce.</p>
+              <span class="meta">18 mins • Easy</span>
+            </div>
+          </a>
+
+          <a class="card" data-title="Tomato Basil Soup" data-cats="vegetarian" href="recipes/tomato-basil-soup.html">
+            <img src="assets/images/placeholder-plate.svg" alt="Tomato Basil Soup" />
+            <div class="card-body">
+              <h3>Tomato Basil Soup</h3>
+              <p>Velvety, bright, and comforting classic tomato soup.</p>
+              <span class="meta">30 mins • Easy</span>
+            </div>
+          </a>
+
+          <a class="card" data-title="Fluffy Pancakes" data-cats="breakfast,dessert" href="recipes/pancakes.html">
+            <img src="assets/images/placeholder-plate.svg" alt="Fluffy Pancakes" />
+            <div class="card-body">
+              <h3>Fluffy Pancakes</h3>
+              <p>Stack of soft pancakes perfect for lazy mornings.</p>
+              <span class="meta">20 mins • Beginner</span>
+            </div>
+          </a>
+
+          <a class="card" data-title="Fudgy Brownies" data-cats="dessert" href="recipes/brownies.html">
+            <img src="assets/images/placeholder-plate.svg" alt="Fudgy Brownies" />
+            <div class="card-body">
+              <h3>Fudgy Brownies</h3>
+              <p>Crackly tops and gooey centers every time.</p>
+              <span class="meta">40 mins • Beginner</span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <a href="#" class="back-to-top" aria-label="Back to top">▲</a>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Taste & Tales</h3>
+            <p>Simple recipes, clear steps, and flavors that feel like home.</p>
+            <div class="social-links">
+              <a href="#" aria-label="Instagram">📷</a>
+              <a href="#" aria-label="Facebook">📘</a>
+              <a href="#" aria-label="Pinterest">📌</a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="recipes.html">All Recipes</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Categories</h4>
+            <ul>
+              <li><a href="recipes.html?category=quick">Quick & Easy</a></li>
+              <li><a href="recipes.html?category=vegetarian">Vegetarian</a></li>
+              <li><a href="recipes.html?category=dessert">Desserts</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Newsletter</h4>
+            <p>Get new recipes and tips delivered to your inbox.</p>
+            <form class="footer-newsletter">
+              <input type="email" placeholder="Your email" />
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© <span id="year"></span> Taste & Tales. Cook with love.</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive NPC Assistant - Chef Quan -->
+    <div class="chef-assistant" id="chefAssistant">
+      <div class="chef-avatar" id="chefAvatar">
+        <div class="notification-badge" id="notificationBadge" style="display: none;">!</div>
+      </div>
+      
+      <div class="chat-bubble" id="chatBubble">
+        <div class="chat-header">
+          <div class="chat-title">
+            <span>Chef Quan</span>
+            <div class="chef-status"></div>
+          </div>
+          <button class="chat-close" id="chatClose">×</button>
+        </div>
+        
+        <div class="chat-content">
+          <div class="chat-messages" id="chatMessages">
+            <div class="message chef">
+              <div class="message-content">
+                🍳 Welcome to our recipe collection! I can help you find the perfect dish, suggest alternatives, or give you cooking tips for any recipe here. What are you in the mood for?
+              </div>
+            </div>
+          </div>
+          
+          <div class="chat-suggestions">
+            <div class="suggestion-chips" id="suggestionChips">
+              <div class="suggestion-chip" data-message="Help me choose a recipe">🤔 Help me choose</div>
+              <div class="suggestion-chip" data-message="Show beginner recipes">👶 Beginner-friendly</div>
+              <div class="suggestion-chip" data-message="Quick dinner ideas">⚡ Quick dinners</div>
+              <div class="suggestion-chip" data-message="Vegetarian options">🌱 Vegetarian</div>
+            </div>
+            
+            <div class="quick-actions">
+              <div class="quick-action" id="filterHelp">
+                <span class="icon">🏷️</span>
+                Filter Help
+              </div>
+              <div class="quick-action" id="surpriseMe">
+                <span class="icon">✨</span>
+                Surprise Me
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const root = document.documentElement;
+      const saved = localStorage.getItem('theme');
+      if (saved) root.setAttribute('data-theme', saved);
+      document.getElementById('theme-toggle').addEventListener('click', () => {
+        const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      });
+      document.getElementById('year').textContent = new Date().getFullYear();
+      // Mobile nav toggle
+      const navToggle = document.getElementById('nav-toggle');
+      const primaryNav = document.querySelector('.nav');
+      navToggle.addEventListener('click', () => { primaryNav.classList.toggle('is-open'); });
+
+      const search = document.getElementById('search');
+      const grid = document.getElementById('grid');
+      const chips = document.getElementById('category-chips');
+      const params = new URLSearchParams(location.search);
+      let activeCat = (params.get('category') || '').toLowerCase();
+
+      function applyFilters() {
+        const query = search.value.toLowerCase().trim();
+        grid.querySelectorAll('.card').forEach(card => {
+          const title = card.dataset.title.toLowerCase();
+          const cats = (card.dataset.cats || '').toLowerCase().split(',');
+          const matchesQuery = title.includes(query);
+          const matchesCat = !activeCat || cats.includes(activeCat);
+          card.style.display = matchesQuery && matchesCat ? '' : 'none';
+        });
+        chips.querySelectorAll('.chip').forEach(chip => {
+          chip.classList.toggle('active', chip.dataset.cat === activeCat || (chip.dataset.cat === '' && activeCat === ''));
+        });
+      }
+
+      // Initialize from query param
+      if (activeCat) {
+        history.replaceState({}, '', `?category=${activeCat}`);
+      }
+
+      // Reveal cards on view (so opacity 0 from CSS doesn't hide them)
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('animate-in');
+        });
+      }, { threshold: 0.1 });
+      grid.querySelectorAll('.card').forEach(c => observer.observe(c));
+
+      applyFilters();
+
+      // Events
+      search.addEventListener('input', applyFilters);
+      chips.addEventListener('click', (e) => {
+        const target = e.target.closest('.chip');
+        if (!target) return;
+        e.preventDefault();
+        activeCat = (target.dataset.cat || '').toLowerCase();
+        const url = activeCat ? `?category=${activeCat}` : location.pathname;
+        history.replaceState({}, '', url);
+        applyFilters();
+      });
+    </script>
+  </body>
+</html> 
